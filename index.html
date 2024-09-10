@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            height: 100vh;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        html {
+            scroll-snap-type: y mandatory;
+        }
+
+        section:nth-of-type(1) {
+            background-color: lightblue;
+        }
+
+        section:nth-of-type(2) {
+            background-color: lightgreen;
+        }
+
+        section:nth-of-type(3) {
+            background-color: lightcoral;
+        }
+
+        section:nth-of-type(4) {
+            background-color: lightgoldenrodyellow;
+        }
+
+        nav {
+            display: none;
+        }
+
+        /* style the elements with CSS */
+        #pleaserotate-graphic {
+            fill: #fff;
+        }
+
+        #pleaserotate-backdrop {
+            color: #fff;
+            background-color: #06244a;
+        }
+    </style>
+    <script>
+        /* you can pass in options here */
+        PleaseRotateOptions = {
+            startOnPageLoad: true,
+            onHide: function () { },
+            onShow: function () { },
+            forcePortrait: false,
+            message: "POR FAVOR, GIRE O SEU DISPOSITIVO!",
+            subMessage: "(para visualizar o conteúdo)",
+            allowClickBypass: false,
+            onlyMobile: true,
+            zIndex: 1000,
+            iconNode: null
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/pleaserotate.js@0.1.2/pleaserotate.min.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <section>
+            <h2>Página 01</h2>
+            <p>Teste página 01</p>
+        </section>
+        <section>
+            <h2>Página 02</h2>
+            <p>Teste página 02</p>
+        </section>
+        <section>
+            <h2>Página 03</h2>
+            <p>Teste página 03</p>
+        </section>
+        <section>
+            <h2>Página 04</h2>
+            <p>Teste página 04</p>
+        </section>
+    </div>
+</body>
+
+</html>
